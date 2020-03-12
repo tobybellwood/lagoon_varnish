@@ -1,0 +1,13 @@
+{
+    "name": "drupal/lagoon_varnish",
+    "description": "Zero configuration varnish for Lagoon",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Blaize Kaye",
+            "email": "blaize.kaye@amazee.com"
+        }
+    ],
+    "require": {}
+}

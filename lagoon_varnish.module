@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains lagoon_varnish.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lagoon_varnish_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the lagoon_varnish module.
+    case 'help.page.lagoon_varnish':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A meta-module that bundles and configures Varnish cache clearing for the Lagoon platform') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * implements hook_install
+ */
+function lagoon_varnish_install() {
+  lagoon_varnish_add_purger();
+}
+
+/**
+ * Checks whether Lagoon varnish purger is enabled, if not, attempts to enable.
+ */
+function lagoon_varnish_add_purger() {
+  /** @var $purger_service \Drupal\purge\Plugin\Purge\Purger\PurgersServiceInterface */
+  $purger_service = \Drupal::service('purge.purgers');
+  $enabled = $purger_service->getPluginsEnabled();
+  $plugin_id = 'lagoon_varnish_purger';
+
+  if (in_array($plugin_id, $purger_service->getPluginsAvailable())) {
+    $enabled[$purger_service->createId()] = $plugin_id;
+    $purger_service->setPluginsEnabled($enabled);
+  }
+}

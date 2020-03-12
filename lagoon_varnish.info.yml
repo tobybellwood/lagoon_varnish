@@ -1,0 +1,15 @@
+name: 'lagoon_varnish'
+type: module
+description: 'A meta-module that bundles and configures Varnish cache clearing for the Lagoon platform'
+core: 8.x
+package: 'amazeeio'
+dependencies:
+  - purge
+  - purge_drush
+  - purge_tokens
+  - purge_ui
+  - purge_processor_cron
+  - purge_processor_lateruntime
+  - purge_queuer_coretags
+  - varnish_purger
+  - varnish_purge_tags
