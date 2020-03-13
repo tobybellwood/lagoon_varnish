@@ -1,5 +1,0 @@
-services:
-  lagoon_varnish.overrider:
-    class: Drupal\lagoon_varnish\LagoonVarnishConfigurationService
-    tags:
-      - {name: config.factory.override, priority: 5}

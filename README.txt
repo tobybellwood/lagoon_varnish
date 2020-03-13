@@ -10,7 +10,8 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-This module provides a zero configuration Varnish Cache setup for Drupal sites running on amazeeio's Lagoon hosting system.
+This module provides a zero configuration Varnish Cache setup for Drupal
+sites running on amazeeio's Lagoon hosting system.
 
 
 REQUIREMENTS
@@ -28,7 +29,9 @@ run "composer require lagoon_varnish && drush pm-enable -y lagoon_varnish"
 CONFIGURATION
 -------------
 
-There should be no configuration required beyond enabling the module. As long as it is running on a Lagoon environment it will deal with clearning Varnish cache.
+There should be no configuration required beyond enabling the module.
+As long as it is running on a Lagoon environment it will deal with
+clearing Varnish cache.
 
 MAINTAINERS
 -----------

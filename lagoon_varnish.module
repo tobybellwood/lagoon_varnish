@@ -24,17 +24,9 @@ function lagoon_varnish_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
- * implements hook_install
- */
-function lagoon_varnish_install() {
-  lagoon_varnish_add_purger();
-}
-
-/**
  * Checks whether Lagoon varnish purger is enabled, if not, attempts to enable.
  */
 function lagoon_varnish_add_purger() {
-  /** @var $purger_service \Drupal\purge\Plugin\Purge\Purger\PurgersServiceInterface */
   $purger_service = \Drupal::service('purge.purgers');
   $purger_service->reload();
   $enabled = $purger_service->getPluginsEnabled();

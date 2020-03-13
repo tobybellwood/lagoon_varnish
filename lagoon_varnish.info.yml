@@ -4,12 +4,12 @@ description: 'A meta-module that bundles and configures Varnish cache clearing f
 core: 8.x
 package: 'amazeeio'
 dependencies:
-  - purge
-  - purge_drush
-  - purge_tokens
-  - purge_ui
-  - purge_processor_cron
-  - purge_processor_lateruntime
-  - purge_queuer_coretags
-  - varnish_purger
-  - varnish_purge_tags
+  - drupal:purge
+  - drupal:purge_drush
+  - drupal:purge_tokens
+  - drupal:purge_ui
+  - drupal:purge_processor_cron
+  - drupal:purge_processor_lateruntime
+  - drupal:purge_queuer_coretags
+  - drupal:varnish_purger
+  - drupal:varnish_purge_tags

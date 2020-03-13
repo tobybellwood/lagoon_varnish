@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains lagoon_varnish.install.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function lagoon_varnish_install() {
+  lagoon_varnish_add_purger();
+}
