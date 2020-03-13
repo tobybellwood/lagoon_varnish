@@ -41,6 +41,11 @@ There should be no configuration required beyond enabling the module.
 As long as it is running on a Lagoon environment it will deal with
 clearing Varnish cache.
 
+ACKNOWLEDGEMENTS
+----------------
+
+This module essentially builds from Varnish Purge https://www.drupal.org/project/varnish_purge
+In particular, it builds off the VarnishPurger class.
 
 MAINTAINERS
 -----------
