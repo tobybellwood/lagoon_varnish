@@ -67,7 +67,7 @@ class LagoonVarnishPurger extends VarnishPurgerBase implements PurgerInterface {
   /**
    * Retrieve the URI to connect to.
    *
-   * @param array $token_data
+   * @param $token_data
    *   An array of keyed objects, to pass on to the token service.
    *
    * @return string
@@ -86,7 +86,7 @@ class LagoonVarnishPurger extends VarnishPurgerBase implements PurgerInterface {
   /**
    * Retrieve all configured headers that need to be set.
    *
-   * @param array $token_data
+   * @param $token_data
    *   An array of keyed objects, to pass on to the token service.
    *
    * @return string[]
