@@ -30,7 +30,7 @@ function lagoon_varnish_add_purger() {
   $purger_service = \Drupal::service('purge.purgers');
   $purger_service->reload();
   $enabled = $purger_service->getPluginsEnabled();
-  $plugin_id = 'lagoon_varnish_purger';
+  $plugin_id = \Drupal\lagoon_varnish\Plugin\Purge\Purger\LagoonVarnishPurger::LAGOON_VARNISH_PURGER_ID;
 
   if (in_array($plugin_id, $purger_service->getPluginsAvailable())) {
     $enabled[$purger_service->createId()] = $plugin_id;

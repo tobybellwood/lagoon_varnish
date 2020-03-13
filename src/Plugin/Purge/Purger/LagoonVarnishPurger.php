@@ -73,7 +73,7 @@ class LagoonVarnishPurger extends VarnishPurgerBase implements PurgerInterface {
    * @return string
    *   URL string representation.
    */
-  protected function getUri(array $token_data) {
+  protected function getUri($token_data) {
     return sprintf(
       '%s://%s:%s%s',
       self::LAGOON_VARNISH_SCHEME,
@@ -92,7 +92,7 @@ class LagoonVarnishPurger extends VarnishPurgerBase implements PurgerInterface {
    * @return string[]
    *   Associative array with header values and field names in the key.
    */
-  protected function getHeaders(array $token_data) {
+  protected function getHeaders($token_data) {
     $headers = [];
     $headers['user-agent'] = 'varnish_purger module for Drupal 8.';
     foreach (self::LAGOON_VARNISH_REQUEST_HEADERS as $field => $value) {
