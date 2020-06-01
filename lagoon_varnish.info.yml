@@ -5,12 +5,12 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 package: 'amazeeio'
 dependencies:
-  - drupal:purge
-  - drupal:purge_drush
-  - drupal:purge_tokens
-  - drupal:purge_ui
-  - drupal:purge_processor_cron
-  - drupal:purge_processor_lateruntime
-  - drupal:purge_queuer_coretags
-  - drupal:varnish_purger
-  - drupal:varnish_purge_tags
+  - purge:purge
+  - purge:purge_drush
+  - purge:purge_tokens
+  - purge:purge_ui
+  - purge:purge_processor_cron
+  - purge:purge_processor_lateruntime
+  - purge:purge_queuer_coretags
+  - varnish_purger:varnish_purger
+  - varnish_purger:varnish_purge_tags
