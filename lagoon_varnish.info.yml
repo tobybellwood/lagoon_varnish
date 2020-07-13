@@ -13,4 +13,3 @@ dependencies:
   - purge:purge_processor_lateruntime
   - purge:purge_queuer_coretags
   - varnish_purger:varnish_purger
-  - varnish_purger:varnish_purge_tags
