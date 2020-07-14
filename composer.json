@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "drupal/varnish_purge": "*"
+        "drupal/varnish_purge": "*",
+        "drupal/purge": "*"
     }
 }
