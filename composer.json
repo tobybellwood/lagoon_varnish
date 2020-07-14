@@ -9,5 +9,7 @@
             "email": "blaize.kaye@amazee.com"
         }
     ],
-    "require": {}
+    "require": {
+        "drupal/varnish_purge": "*"
+    }
 }
